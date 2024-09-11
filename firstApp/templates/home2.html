@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid px-3 py-1">
+              <a class="navbar-brand" href="#">Agro mart</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#"  >Cart</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#"  >Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#"  >Wishlist</a>
+                  </li>
+    
+                </ul>
+                <form class="d-flex align-items-center">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <img src="{% static 'images/search.png' %}" height="30" width="30" alt="">
+                </form>
+              </div>
+            </div>
+        </nav>
+        <div class="col-lg-5 col-md-6 col-12 d-flex flex-column p-3 gap-3 mt-2">
+            <h3>Harvest Hub: Fresh, Farm-Fresh Products Delivered to Your Doorstep</h3>
+            <p>Discover a wide range of premium agricultural products sourced directly from local farms. At Harvest Hub, we connect you with the freshest fruits, vegetables, grains, and more, ensuring quality and sustainability with every purchase. Shop now and support local agriculture while enjoying the best produce available!</p>
+            <button class="btn btn-outline-warning">Shop now</button>
+        </div>
+        <img src="" alt="">
+    </header>
+    <section>
+        <div class="d-flex  flex-row flex-wrap justify-content-around p-3">
+          {% if count %}
+            {% for i in count %}
+              <div class="card mb-3" style="width: 18rem;" >
+                <img src="..." class="card-img-top" alt="..." height="100" width="80">
+                <div class="card-body">
+                  <h5 class="card-title">Apple</h5>
+                  <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, expedita.</p>
+                </div>
+                <div class="card-body d-flex flex-column p-1">
+                  <p class="card-link w-100 text-center"><b>₹100/-</b></p>
+                  <a href="#" class="card-link btn btn-outline-dark">View</a>
+                </div>
+              </div>
+            {% endfor %}
+         {% endif %}
+        </div>
+    </section>
+    <footer class="d-flex flex-row bg-secondary">
+        <div class="w-50">
+            <h3>Agro market</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quam voluptates quae cum, voluptatem sed!</p>
+            <p class="d-flex flex-row align-items-center gap-2">
+                <img src="{% static 'images/location.png' %}" height="18" width="18" alt="">
+                <span>184 Main rd, Albans VIC 3021</span>
+            </p>
+            <p class="d-flex flex-row align-items-center gap-2">
+                <img src="{% static 'images/email.png' %}"  height="18" width="18" alt="">
+                <span>demo@gmail.com</span>
+            </p>
+        </div>
+    </footer>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

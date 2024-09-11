@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt delectus ipsam totam quas architecto atque?
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus qui eos veritatis. Necessitatibus vel accusamus consectetur aliquid, officiis deserunt repellat quo, eveniet quas dolor earum laborum porro cumque ducimus veritatis qui recusandae? Voluptatibus quisquam, tempora, rem nam at blanditiis culpa repellendus facere mollitia, ratione eos quas molestias. At nostrum, facere optio doloribus sunt incidunt. Cum et molestiae corporis odit quisquam veniam! Obcaecati fugiat veniam, deleniti vero rem sunt magnam inventore fuga libero ratione hic quibusdam molestiae aspernatur nemo! Quos obcaecati, officiis commodi minima quidem ipsum eveniet assumenda? Optio eveniet, impedit possimus nobis voluptatibus enim commodi adipisci beatae magnam labore neque?
+
+    <form action="{% url 'product' %}" method="post">
+        {% csrf_token %}
+        name
+        <input type="text" name="name" id="">
+        price
+        <input type="number" name="price" id="">
+        category
+        <input type="text" name="cat" id="">
+        short desc
+        <input type="text" name="sdesc" id="">
+        long desc 
+        <input type="text" name="ldesc" id="">
+        <input type="submit" >
+    </form>
+
+    <h1>Using django build in forms</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit form 2</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+firstApp/__pycache__
+firstApp/migrations
+firstApp/__init__.py
+firstApp/tests.py
+db.sqlite3
+
+firstProject/__pycache__
+firstProject/__init__.py
+firstProject/asgi.py
+firstProject/wsgi.py
+manage.py
